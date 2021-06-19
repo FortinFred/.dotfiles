@@ -5,7 +5,7 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 #.Oh-My-Zsh
 sudo apt update
 sudo apt install git zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended "" --keep-zshrc
 chsh -s /usr/bin/zsh
 
 #powerlevel10k

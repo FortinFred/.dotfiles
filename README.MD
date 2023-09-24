@@ -6,6 +6,8 @@ git config --global credential.helper "/mnt/c/Program\ Files\ \(x86\)/Git\ Crede
 
 cd ~
 git clone https://github.com/FortinFred/dotfiles.git .dotfiles
+
+. ./.dotfiles/bootstrap.sh
 ```
 # WSL2 Fonts
 

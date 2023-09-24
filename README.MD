@@ -24,6 +24,9 @@ Then change WSL configuration to use that font.
                 "hidden": false,
                 "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl",
-                "fontFace": "MesloLGS NF" // Change this
+                "font": // Add this
+                    {
+                        "face": "MesloLGS NF"
+                    }, 
             }
 ```

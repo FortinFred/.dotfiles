@@ -1,13 +1,12 @@
 #!/bin/bash
 
-XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+installTmp() {
+  mkdir -p $HOME/.tmux/plugins
 
-mkdir -p $XDG_CONFIG_HOME
-rm -f $XDG_CONFIG_HOME/tmux
-ln -sf $(pwd) $XDG_CONFIG_HOME/tmux
+  if [ ! -d $HOME/.tmux/plugins/tpm ]; then
+    git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  fi
+}
 
-mkdir -p $HOME/.tmux/plugins
-
-if [ ! -d $HOME/.tmux/plugins/tpm ]; then
-  git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
+setupSymlink $(pwd) $XDG_CONFIG_HOME/tmux
+installTmp

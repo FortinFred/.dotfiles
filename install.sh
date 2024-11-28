@@ -24,4 +24,5 @@ function main() {
   done
 }
 
+setupSymlink $(pwd)/.bashrc $HOME/.bashrc
 main

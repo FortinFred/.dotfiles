@@ -5,12 +5,6 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
-
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
   for rc in ~/.bashrc.d/*; do
@@ -21,8 +15,5 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-# nvim
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
-# starship
-eval "$(starship init bash)"
+# source .dotfilesrc if exists
+[ -f ~/.dotfilesrc ] && source ~/.dotfilesrc

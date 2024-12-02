@@ -12,7 +12,17 @@ function setupSymlink() {
 
 export -f setupSymlink
 
+function dotfilesRC() {
+  # append all params to .dotfilesrc
+  echo "$@" >>$HOME/.dotfilesrc
+}
+
+export -f dotfilesRC
+
 function main() {
+  echo "Clear ~/.dotfilesrc"
+  echo "" >$HOME/.dotfilesrc
+
   #loop on all dirs and execute install.sh if present
   for dir in ./*; do
     if [ -f "$dir/install.sh" ]; then
@@ -24,5 +34,4 @@ function main() {
   done
 }
 
-setupSymlink $(pwd)/.bashrc $HOME/.bashrc
 main

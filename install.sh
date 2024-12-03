@@ -1,23 +1,9 @@
 #!/bin/bash
 
+source ./utils.sh
+
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 mkdir -p $XDG_CONFIG_HOME
-
-function setupSymlink() {
-  source=$1
-  dest=$2
-  rm -f $2
-  ln -sf $1 $2
-}
-
-export -f setupSymlink
-
-function dotfilesRC() {
-  # append all params to .dotfilesrc
-  echo "$@" >>$HOME/.dotfilesrc
-}
-
-export -f dotfilesRC
 
 function main() {
   echo "Clear ~/.dotfilesrc"

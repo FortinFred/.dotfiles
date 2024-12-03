@@ -6,11 +6,13 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 mkdir -p $XDG_CONFIG_HOME
 
 function main() {
+  PACKAGE=${1:-*}
+
   echo "Clear ~/.dotfilesrc"
   echo "" >$HOME/.dotfilesrc
 
   #loop on all dirs and execute install.sh if present
-  for dir in ./*; do
+  for dir in ./$PACKAGE; do
     if [ -f "$dir/install.sh" ]; then
       echo "Setting up $dir"
       pushd $dir >/dev/null
@@ -20,4 +22,4 @@ function main() {
   done
 }
 
-main
+main $1

@@ -9,6 +9,7 @@ rm -f /tmp/nodejs.tar.xz
 
 sudo ln -s $NODEJS_DIR/bin/node /usr/local/bin/node
 sudo ln -s $NODEJS_DIR/bin/npm /usr/local/bin/npm
+sudo ln -s $NODEJS_DIR/bin/npx /usr/local/bin/npx
 
 npm config set prefix "~/.npm-global"
 

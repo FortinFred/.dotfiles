@@ -3,9 +3,9 @@ setupSymlink $(pwd) $XDG_CONFIG_HOME/nvim
 
 installNvim() {
   if command -v dnf &>/dev/null; then
-    dnf install -y gcc fd-find ripgrep
+    sudo dnf install -y gcc fd-find ripgrep
   elif command -v apt &>/dev/null; then
-    apt install -y gcc fd-find ripgrep
+    sudo apt install -y gcc fd-find ripgrep
   fi
 
   npm install -g neovim

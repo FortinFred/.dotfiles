@@ -8,5 +8,5 @@ installTmp() {
   fi
 }
 
-setupSymlink $(pwd) $XDG_CONFIG_HOME/tmux
+symlink $(pwd) $XDG_CONFIG_HOME/tmux
 installTmp

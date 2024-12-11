@@ -5,11 +5,11 @@ function dotfilesRC() {
   echo "$@" >>$HOME/.dotfilesrc
 }
 
-function setupSymlink() {
+function symlink() {
   source=$1
   dest=$2
   rm -f $2
   ln -sf $1 $2
 }
 
-export -f dotfilesRC setupSymlink
+export -f dotfilesRC symlink

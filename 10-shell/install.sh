@@ -1,8 +1,8 @@
 #!/bin/bash
 
-setupSymlink $(pwd)/.bashrc $HOME/.bashrc
-setupSymlink $(pwd)/.zshrc $HOME/.zshrc
-setupSymlink $(pwd)/.p10k.zsh $HOME/.p10k.zsh
+symlink $(pwd)/.bashrc $HOME/.bashrc
+symlink $(pwd)/.zshrc $HOME/.zshrc
+symlink $(pwd)/.p10k.zsh $HOME/.p10k.zsh
 
 installZsh() {
   # if dnf command is available

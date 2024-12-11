@@ -1,5 +1,5 @@
 #!/bin/bash
-setupSymlink $(pwd) $XDG_CONFIG_HOME/nvim
+symlink $(pwd) $XDG_CONFIG_HOME/nvim
 
 installNvim() {
   if command -v dnf &>/dev/null; then

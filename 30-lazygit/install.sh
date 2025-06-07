@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 LAZYGIT_DIR=$HOME/tools/lazygit
 
 if [ ! -f $LAZYGIT_DIR/lazygit ]; then

@@ -2,7 +2,7 @@ return {
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
-    branch = "main",
+    version = false, -- Never set this value to "*"! Never!
     opts = {
       -- add any opts here
       -- for example

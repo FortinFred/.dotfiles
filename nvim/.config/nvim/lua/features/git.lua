@@ -1,6 +1,7 @@
 local add = require("which-key").add
 add({ { "<leader>h", group = "hunk" } })
 add({ { "<leader>g", group = "git" } })
+add({ { "<leader>t", group = "[T]oggles" } })
 return {
     {
         "folke/snacks.nvim",

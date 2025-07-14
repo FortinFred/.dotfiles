@@ -10,7 +10,7 @@ export PATH
 
  
 # GitHub CLI
-export PATH="/home/fred/tools/gh/bin:/home/fred/tools/gh/bin:/home/fred/.local/bin:/home/fred/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/fred/.dotnet/tools:/home/fred/tools/lazygit:/opt/nvim-linux-x86_64/bin:/home/fred/tools/lazygit:/opt/nvim-linux-x86_64/bin"
+export PATH="$HOME/tools/gh/bin:$HOME/tools/gh/bin:$HOME/.local/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$HOME/.dotnet/tools:$HOME/tools/lazygit:/opt/nvim-linux-x86_64/bin:$HOME/tools/lazygit:/opt/nvim-linux-x86_64/bin"
 
 
 # Lazygit

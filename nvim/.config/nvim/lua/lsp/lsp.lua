@@ -18,6 +18,7 @@ require("mason-tool-installer").setup({
     },
 })
 
+-- adds vim globals for neovim config
 vim.lsp.config("lua_ls", {
     settings = {
         Lua = {

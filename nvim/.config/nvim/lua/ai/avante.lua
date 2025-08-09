@@ -1,3 +1,4 @@
+-- Post install, build avante
 vim.api.nvim_create_autocmd("PackChanged", {
     desc = "Handle avante updates",
     group = vim.api.nvim_create_augroup("avante-pack-changed-update-handler", { clear = true }),
@@ -33,22 +34,6 @@ vim.pack.add({
     "https://github.com/MeanderingProgrammer/render-markdown.nvim",
 
     { src = "https://github.com/yetone/avante.nvim", version = "v0.0.27" },
-})
--- deps:
--- require("plenary").setup({
---     -- use recommended settings from above
--- })
-require("cmp").setup({
-    -- use recommended settings from above
-})
-require("img-clip").setup({
-    -- use recommended settings from above
-})
-require("copilot").setup({
-    -- use recommended settings from above
-})
-require("render-markdown").setup({
-    file_types = { "markdown", "Avante" },
 })
 
 require("avante").setup({

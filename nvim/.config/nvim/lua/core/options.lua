@@ -41,6 +41,7 @@ vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 vim.o.winborder = "rounded" -- Adds rounded borders to windows
 
 -- Behavior settings
+vim.opt.confirm = true -- Confirm to save changes before exiting modified buffer
 vim.opt.hidden = true -- Allow hidden buffers
 vim.opt.errorbells = false -- No error bells
 vim.opt.backspace = "indent,eol,start" -- Better backspace behavior

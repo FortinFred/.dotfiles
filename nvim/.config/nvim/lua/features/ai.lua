@@ -20,17 +20,15 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
 vim.pack.add({
     -- avante's dependencies
-    "https://github.com/nvim-treesitter/nvim-treesitter",
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
     "https://github.com/zbirenbaum/copilot.lua",
-    "https://github.com/echasnovski/mini.pick", -- for file_selector provider mini.pick
+    -- "https://github.com/echasnovski/mini.pick", -- for file_selector provider mini.pick
     "https://github.com/hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "https://github.com/stevearc/dressing.nvim", -- for input provider dressing
     "https://github.com/folke/snacks.nvim", -- for input provider snacks
     "https://github.com/nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    "https://github.com/zbirenbaum/copilot.lua", -- for providers='copilot'
     "https://github.com/HakonHarnes/img-clip.nvim",
     "https://github.com/MeanderingProgrammer/render-markdown.nvim",
 

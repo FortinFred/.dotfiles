@@ -5,32 +5,7 @@ vim.pack.add({
     },
 })
 
-require("nvim-treesitter").setup({
-    ensure_installed = {
-        "json",
-        "javascript",
-        "typescript",
-        "yaml",
-        "html",
-        "css",
-        "scss",
-        "markdown",
-        "markdown_inline",
-        "bash",
-        "lua",
-        "dockerfile",
-        "gitignore",
-        "java",
-    },
-    auto_install = false,
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    },
-    indent = {
-        enable = true,
-    },
-})
+require("nvim-treesitter").setup()
 
 vim.api.nvim_create_autocmd("PackChanged", {
     desc = "Handle nvim-treesitter updates",

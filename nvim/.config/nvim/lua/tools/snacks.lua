@@ -7,6 +7,9 @@ require("snacks").setup({
     lazygit = {},
 })
 
+local wk = require("which-key")
+wk.add({ "<leader>s", group = "Search" })
+
 vim.keymap.set("n", "<leader>gg", function()
     Snacks.lazygit()
 end, { desc = "Open Lazygit" })

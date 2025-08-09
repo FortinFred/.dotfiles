@@ -1,7 +1,7 @@
 local add = require("which-key").add
-add({ { "<leader>h", group = "hunk" } })
-add({ { "<leader>g", group = "git" } })
-add({ { "<leader>t", group = "[T]oggles" } })
+add({ { "<leader>h", group = "Hunk" } })
+add({ { "<leader>g", group = "Git" } })
+add({ { "<leader>t", group = "Toggles" } })
 
 ----------
 -- LazyGit

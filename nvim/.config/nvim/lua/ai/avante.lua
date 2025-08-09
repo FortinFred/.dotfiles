@@ -39,3 +39,6 @@ vim.pack.add({
 require("avante").setup({
     provider = "copilot",
 })
+
+local wk = require("which-key")
+wk.add({ "<leader>a", group = "ai" })

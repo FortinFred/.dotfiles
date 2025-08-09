@@ -1,6 +1,15 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Load which-key for keymap tips
+vim.pack.add({ "https://github.com/folke/which-key.nvim" })
+local wk = require("which-key")
+wk.setup({ preset = "helix" })
+
+wk.add({ { "<leader>b", group = "Buffers" } })
+wk.add({ { "<leader>w", group = "Windows" } })
+wk.add({ { "<leader>q", group = "Quit" } })
+
 vim.keymap.set("n", "<leader>qq", "<CMD>qa!<CR>", { desc = "Quit All" })
 vim.keymap.set("n", "<leader>qr", "<CMD>restart<CR>", { desc = "Restart" })
 -- save and return to normal mode
@@ -29,7 +38,3 @@ vim.keymap.set("n", "<leader>ba", function()
         end
     end
 end, { desc = "Delete All Buffers" })
-
--- Load which-key for keymap tips
-vim.pack.add({ "https://github.com/folke/which-key.nvim" })
-require("which-key").setup({ preset = "helix" })

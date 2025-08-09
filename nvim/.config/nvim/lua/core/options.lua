@@ -1,13 +1,10 @@
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = true
 
 vim.opt.relativenumber = true
 vim.opt.number = true
 
+vim.o.winborder = "rounded"
+vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 
 vim.opt.clipboard:append("unnamedplus")
@@ -21,6 +18,6 @@ vim.opt.shiftwidth = 4
 vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
     callback = function()
-        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
+        vim.hl.on_yank({ higroup = "IncSearch", timeout = 200 })
     end,
 })

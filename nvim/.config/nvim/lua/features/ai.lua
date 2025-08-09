@@ -1,55 +1,58 @@
-return {
-    { "zbirenbaum/copilot.lua", opts = {} },
-    {
-        "yetone/avante.nvim",
-        event = "VeryLazy",
-        version = false, -- Never set this value to "*"! Never!
-        opts = {
-            -- add any opts here
-            -- for example
-            provider = "copilot",
-        },
-        -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-        build = "make",
-        -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-            --- The below dependencies are optional,
-            "echasnovski/mini.pick", -- for file_selector provider mini.pick
-            -- "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-            "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-            "ibhagwan/fzf-lua", -- for file_selector provider fzf
-            "stevearc/dressing.nvim", -- for input provider dressing
-            "folke/snacks.nvim", -- for input provider snacks
-            "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-            "zbirenbaum/copilot.lua", -- for providers='copilot'
-            {
-                -- support for image pasting
-                "HakonHarnes/img-clip.nvim",
-                event = "VeryLazy",
-                opts = {
-                    -- recommended settings
-                    default = {
-                        embed_image_as_base64 = false,
-                        prompt_for_file_name = false,
-                        drag_and_drop = {
-                            insert_mode = true,
-                        },
-                        -- required for Windows users
-                        use_absolute_path = true,
-                    },
-                },
-            },
-            {
-                -- Make sure to set this up properly if you have lazy=true
-                "MeanderingProgrammer/render-markdown.nvim",
-                opts = {
-                    file_types = { "markdown", "Avante" },
-                },
-                ft = { "markdown", "Avante" },
-            },
-        },
-    },
-}
+vim.api.nvim_create_autocmd("PackChanged", {
+    desc = "Handle avante updates",
+    group = vim.api.nvim_create_augroup("avante-pack-changed-update-handler", { clear = true }),
+    callback = function(event)
+        if event.data.kind == "update" then
+            vim.notify("avante updated, running make...", vim.log.levels.INFO)
+
+            vim.loop.spawn("make", {
+                cwd = event.data.path,
+            }, function(err)
+                if err then
+                    vim.notify("Error building(make) avante!", vim.log.levels.ERROR)
+                else
+                    vim.notify("avante builded successfully", vim.log.levels.INFO)
+                end
+            end)
+        end
+    end,
+})
+
+vim.pack.add({
+    -- avante's dependencies
+    "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/MunifTanjim/nui.nvim",
+    --- The below dependencies are optional,
+    "https://github.com/zbirenbaum/copilot.lua",
+    "https://github.com/echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "https://github.com/hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+    "https://github.com/stevearc/dressing.nvim", -- for input provider dressing
+    "https://github.com/folke/snacks.nvim", -- for input provider snacks
+    "https://github.com/nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+    "https://github.com/zbirenbaum/copilot.lua", -- for providers='copilot'
+    "https://github.com/HakonHarnes/img-clip.nvim",
+    "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+
+    { src = "https://github.com/yetone/avante.nvim", version = "v0.0.27" },
+})
+-- deps:
+-- require("plenary").setup({
+--     -- use recommended settings from above
+-- })
+require("cmp").setup({
+    -- use recommended settings from above
+})
+require("img-clip").setup({
+    -- use recommended settings from above
+})
+require("copilot").setup({
+    -- use recommended settings from above
+})
+require("render-markdown").setup({
+    file_types = { "markdown", "Avante" },
+})
+
+require("avante").setup({
+    provider = "copilot",
+})

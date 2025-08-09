@@ -1,4 +1,8 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.keymap.set("n", "<leader>qq", "<CMD>qa!<CR>", { desc = "Quit All" })
+vim.keymap.set("n", "<leader>qr", "<CMD>restart<CR>", { desc = "Restart" })
 -- save and return to normal mode
 vim.keymap.set({ "n", "i" }, "<C-s>", "<ESC><CMD>w<CR>", { desc = "Save File and Exit Insert Mode" })
 
@@ -25,3 +29,7 @@ vim.keymap.set("n", "<leader>ba", function()
         end
     end
 end, { desc = "Delete All Buffers" })
+
+-- Load which-key for keymap tips
+vim.pack.add({ "https://github.com/folke/which-key.nvim" })
+require("which-key").setup({ preset = "helix" })

@@ -1,32 +1,31 @@
-return {
-    {
-        "saghen/blink.cmp",
-        dependencies = { "rafamadriz/friendly-snippets", "giuxtaposition/blink-cmp-copilot" },
-        version = "1.*",
-        opts = {
+vim.pack.add({
+    { src = "https://github.com/Saghen/blink.cmp", version = "v1.6.0" },
+    "https://github.com/rafamadriz/friendly-snippets",
+    "https://github.com/giuxtaposition/blink-cmp-copilot",
+})
 
-            keymap = { preset = "default", ["<CR>"] = { "accept", "fallback" }, ["<C><leader>"] = { "show" } },
+require("blink.cmp").setup({
 
-            appearance = {
-                nerd_font_variant = "mono",
-            },
+    keymap = { preset = "default", ["<CR>"] = { "accept", "fallback" }, ["<C><leader>"] = { "show" } },
 
-            completion = { documentation = { auto_show = true } },
-
-            sources = {
-                default = { "lsp", "path", "snippets", "buffer", "copilot" },
-                providers = {
-                    copilot = {
-                        name = "copilot",
-                        module = "blink-cmp-copilot",
-                        score_offset = 100,
-                        async = true,
-                    },
-                },
-            },
-
-            fuzzy = { implementation = "prefer_rust_with_warning" },
-        },
-        opts_extend = { "sources.default" },
+    appearance = {
+        nerd_font_variant = "mono",
     },
-}
+
+    completion = { documentation = { auto_show = true } },
+
+    sources = {
+        default = { "lsp", "path", "snippets", "buffer", "copilot" },
+        providers = {
+            copilot = {
+                name = "copilot",
+                module = "blink-cmp-copilot",
+                score_offset = 100,
+                async = true,
+            },
+        },
+    },
+
+    fuzzy = { implementation = "prefer_rust_with_warning" },
+})
+--	    opts_extend = { "sources.default" },

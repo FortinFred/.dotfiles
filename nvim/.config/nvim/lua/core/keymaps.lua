@@ -6,6 +6,9 @@ vim.pack.add({ "https://github.com/folke/which-key.nvim" })
 local wk = require("which-key")
 wk.setup({ preset = "helix" })
 
+-- Global groups
+wk.add({ { "<leader>c", group = "Code" } })
+
 wk.add({ { "<leader>q", group = "Quit" } })
 vim.keymap.set("n", "<leader>qq", "<CMD>qa!<CR>", { desc = "Quit All" })
 vim.keymap.set("n", "<leader>qr", "<CMD>restart<CR>", { desc = "Restart" })

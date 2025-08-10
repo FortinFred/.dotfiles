@@ -4,15 +4,13 @@ vim.api.nvim_create_autocmd("PackChanged", {
     group = vim.api.nvim_create_augroup("avante-pack-changed-update-handler", { clear = true }),
     callback = function(event)
         if event.data.kind == "update" then
-            vim.notify("avante updated, running make...", vim.log.levels.INFO)
-
             vim.loop.spawn("make", {
                 cwd = event.data.path,
-            }, function(err)
-                if err then
-                    vim.notify("Error building(make) avante!", vim.log.levels.ERROR)
+            }, function(exitcode)
+                if exitcode == 0 then
+                    print("Avanvate built successfully!")
                 else
-                    vim.notify("avante builded successfully", vim.log.levels.INFO)
+                    print("Error building(make) avante!")
                 end
             end)
         end

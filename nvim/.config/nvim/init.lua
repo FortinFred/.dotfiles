@@ -1,5 +1,5 @@
 require("core")
 require("ui")
-require("lsp")
 require("ai")
+require("lsp")
 require("tools")

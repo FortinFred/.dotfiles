@@ -3,6 +3,7 @@ vim.pack.add({
 })
 
 require("snacks").setup({
+    notifier = {},
     picker = {},
     lazygit = {},
 })

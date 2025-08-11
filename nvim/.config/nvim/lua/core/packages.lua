@@ -63,6 +63,10 @@ vim.pack.add({
     -- copilot.lua for GitHub Copilot integration
     "https://github.com/zbirenbaum/copilot.lua",
 
+    -- mcp-hub and dependencies
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/ravitemer/mcphub.nvim",
+
     -- avante's dependencies
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/MunifTanjim/nui.nvim",

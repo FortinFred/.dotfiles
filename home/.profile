@@ -20,3 +20,5 @@ export PATH=$PATH:$HOME/tools/lazygit
 # nvim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
+# npm
+export PATH=$PATH:$HOME/.npm-global/bin

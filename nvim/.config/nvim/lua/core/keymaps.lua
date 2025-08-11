@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Load which-key for keymap tips
-vim.pack.add({ "https://github.com/folke/which-key.nvim" })
 local wk = require("which-key")
 wk.setup({ preset = "helix" })
 

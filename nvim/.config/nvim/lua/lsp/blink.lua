@@ -1,9 +1,3 @@
-vim.pack.add({
-    "https://github.com/giuxtaposition/blink-cmp-copilot",
-    "https://github.com/rafamadriz/friendly-snippets",
-    { src = "https://github.com/Saghen/blink.cmp", version = "v1.6.0" },
-})
-
 require("blink.cmp").setup({
 
     keymap = { preset = "default", ["<CR>"] = { "accept", "fallback" }, ["<C><leader>"] = { "show" } },

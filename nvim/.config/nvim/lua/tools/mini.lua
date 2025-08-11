@@ -1,9 +1,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.pack.add({
-    "https://github.com/echasnovski/mini.nvim",
-})
 require("mini.ai").setup()
 require("mini.pairs").setup()
 require("mini.files").setup({

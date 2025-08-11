@@ -3,24 +3,9 @@ add({ { "<leader>h", group = "Hunk" } })
 add({ { "<leader>g", group = "Git" } })
 add({ { "<leader>t", group = "Toggles" } })
 
-----------
--- LazyGit
---
--- vim.pack.add({
---     "https://github.com/folke/snacks.nvim",
--- })
---
--- require("snacks").setup({
---     lazygit = {},
--- })
--- vim.keymap.set("n", "<leader>gg", function()
---     Snacks.lazygit()
--- end, { desc = "Open Lazygit" })
-
 ------------
 -- Git Signs
 --
-vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
 require("gitsigns").setup({
     current_line_blame = true,
     current_line_blame_opts = {

@@ -1,4 +1,3 @@
-vim.pack.add({ { src = "https://github.com/mfussenegger/nvim-lint", name = "lint" } })
 local lint = require("lint")
 
 -- Event to trigger linters

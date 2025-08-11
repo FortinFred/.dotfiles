@@ -1,5 +1,3 @@
-vim.pack.add({ "https://github.com/folke/flash.nvim" })
-
 local flash = require("flash")
 flash.setup()
 

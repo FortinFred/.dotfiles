@@ -1,5 +1,3 @@
-vim.pack.add({ "https://github.com/folke/trouble.nvim" })
-
 require("trouble").setup({})
 
 require("which-key").add({ "<leader>x", group = "Diagnostics" })

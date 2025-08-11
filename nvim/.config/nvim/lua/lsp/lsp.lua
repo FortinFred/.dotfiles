@@ -1,22 +1,12 @@
-require("mason").setup()
-require("mason-lspconfig").setup()
-require("mason-tool-installer").setup({
-    ensure_installed = {
-        "lua_ls",
-        "stylua",
-        "prettier",
-        "prettierd",
-        "isort",
-        "black",
-        "ts_ls",
-        "angularls",
-        "eslint",
-        "html",
-        "jdtls",
-        "sonarlint-language-server",
-        "jsonls",
-    },
-})
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("stylua")
+
+vim.lsp.enable("angularls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("html")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("ts_ls")
+
 vim.pack.add({ "https://github.com/folke/lazydev.nvim" })
 
 require("lazydev").setup({

@@ -18,11 +18,8 @@ vim.pack.add({
     "https://github.com/nvim-tree/nvim-web-devicons",
     "https://github.com/akinsho/bufferline.nvim",
 
-    -- LSP and its dependencies
+    -- LSP
     "https://github.com/neovim/nvim-lspconfig",
-    "https://github.com/mason-org/mason.nvim",
-    "https://github.com/mason-org/mason-lspconfig.nvim",
-    "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 
     -- mini.nvim for multiple utilities
     "https://github.com/echasnovski/mini.nvim",

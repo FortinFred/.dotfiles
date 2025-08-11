@@ -77,4 +77,7 @@ vim.pack.add({
     "https://github.com/HakonHarnes/img-clip.nvim",
     "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     { src = "https://github.com/yetone/avante.nvim", version = "v0.0.27" },
+
+    --tmux
+    "https://github.com/alexghergh/nvim-tmux-navigation"
 })

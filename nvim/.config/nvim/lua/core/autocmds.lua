@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd("PackChanged", {
     desc = "Handle post package install tasks",
-    group = vim.api.nvim_create_augroup("fred-neovim-setup", { clear = true }),
+    group = vim.api.nvim_create_augroup("fred-neovim-pack-changed", { clear = true }),
     callback = function(event)
         if event.data.kind == "update" then
             -- nvim-treesitter

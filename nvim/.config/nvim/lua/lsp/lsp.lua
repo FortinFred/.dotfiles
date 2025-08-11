@@ -8,6 +8,13 @@ require("mason-tool-installer").setup({
         "prettierd",
         "isort",
         "black",
+        "ts_ls",
+        "angularls",
+        "eslint",
+        "html",
+        "jdtls",
+        "sonarlint-language-server",
+        "jsonls",
     },
 })
 vim.pack.add({ "https://github.com/folke/lazydev.nvim" })

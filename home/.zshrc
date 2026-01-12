@@ -15,4 +15,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+source ~/.local/share/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/.local/share/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
 eval "$(oh-my-posh init zsh)"
+

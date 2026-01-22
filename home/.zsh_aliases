@@ -1,0 +1,4 @@
+alias lg='lazygit'
+alias vim='nvim'
+alias v='nvim'
+alias gs='git status'

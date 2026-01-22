@@ -6,6 +6,12 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -21,3 +27,6 @@ source ~/.local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin
 
 eval "$(oh-my-posh init zsh)"
 
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi   

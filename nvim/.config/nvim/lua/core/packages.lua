@@ -79,5 +79,8 @@ vim.pack.add({
     { src = "https://github.com/yetone/avante.nvim", version = "v0.0.27" },
 
     --tmux
-    "https://github.com/alexghergh/nvim-tmux-navigation"
+    "https://github.com/alexghergh/nvim-tmux-navigation",
+
+    --grug-far
+    "https://github.com/MagicDuck/grug-far.nvim",
 })

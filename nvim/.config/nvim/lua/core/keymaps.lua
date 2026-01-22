@@ -28,18 +28,34 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to Top Window" })
 
 -- buffer management
 wk.add({ { "<leader>b", group = "Buffers" } })
-vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete Current Buffer" })
-vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Previous Buffer" })
-vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Next Buffer" })
--- delete all buffers
-vim.keymap.set("n", "<leader>ba", function()
+
+local function delete_buffers(filter)
     local bufs = vim.api.nvim_list_bufs()
     for _, buf in ipairs(bufs) do
-        if vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_option(buf, "buflisted") then
+        if filter(buf) and vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_option(buf, "buflisted") then
             vim.api.nvim_buf_delete(buf, { force = true })
         end
     end
+end
+
+-- delete other buffers
+vim.keymap.set("n", "<leader>bo", function()
+    local current_buf = vim.api.nvim_get_current_buf()
+    delete_buffers(function(buf)
+        return buf ~= current_buf
+    end)
+end, { desc = "Delete Other Buffers" })
+
+-- delete all buffers
+vim.keymap.set("n", "<leader>ba", function()
+    delete_buffers(function(buf)
+        return true
+    end)
 end, { desc = "Delete All Buffers" })
+
+vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete Current Buffer" })
+vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Next Buffer" })
 
 -- package management
 wk.add({ { "<leader>p", group = "Packs" } })

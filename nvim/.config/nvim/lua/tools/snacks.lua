@@ -1,6 +1,13 @@
 require("snacks").setup({
     notifier = {},
-    picker = {},
+    picker = {
+      sources = {
+        files = {
+          hidden = true,
+        },
+        grep = { hidden = true}
+      }
+    },
     lazygit = {},
 })
 

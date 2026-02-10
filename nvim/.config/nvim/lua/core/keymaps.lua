@@ -57,6 +57,11 @@ vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>", { desc = "Delete Current Buffer
 vim.keymap.set("n", "<S-h>", "<CMD>bp<CR>", { desc = "Previous Buffer" })
 vim.keymap.set("n", "<S-l>", "<CMD>bn<CR>", { desc = "Next Buffer" })
 
+-- Display full path of current buffer
+vim.keymap.set("n", "<leader>fp", function()
+  print(vim.api.nvim_buf_get_name(0))
+end, { desc = "Show Full Path of Current Buffer" })
+
 -- package management
 wk.add({ { "<leader>p", group = "Packs" } })
 vim.keymap.set("n", "<leader>pc", function()

@@ -1,5 +1,6 @@
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("stylua")
+vim.lsp.enable("gh_actions")
 
 vim.lsp.enable("angularls")
 vim.lsp.enable("eslint")

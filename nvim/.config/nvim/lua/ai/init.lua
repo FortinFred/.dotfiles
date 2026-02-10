@@ -1,3 +1,3 @@
 require("ai.copilot")
-require("ai.mcphub")
-require("ai.avante")
+-- require("ai.mcphub")
+-- require("ai.avante")

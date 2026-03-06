@@ -5,6 +5,14 @@
       "options": {
         "baseURL": "https://api.business.githubcopilot.com"
       }
+    },
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1"
+      }
     }
-  }
+  },
+  "plugin": ["opencode-plugin-llama.cpp@latest"]
 }

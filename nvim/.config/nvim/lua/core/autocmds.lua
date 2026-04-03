@@ -18,7 +18,8 @@ vim.api.nvim_create_autocmd("PackChanged", {
             -- avante
             if event.data.spec.name == "avante.nvim" then
                 vim.notify("avante updated, running make...", vim.log.levels.INFO)
-                vim.loop.spawn("make", {
+                vim.uv.spawn("make", {
+                    args = {},
                     cwd = event.data.path,
                 }, function(exitcode)
                     if exitcode == 0 then
@@ -32,7 +33,9 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
             if event.data.spec.name == "mcphub.nvim" then
                 vim.notify("mcp-hub updated, running make...", vim.log.levels.INFO)
-                vim.loop.spawn("npm install -g mcp-hub@latest", {}, function(exitcode)
+                vim.uv.spawn("npm", {
+                    args = { "install", "-g", "mcp-hub@latest" },
+                }, function(exitcode)
                     if exitcode == 0 then
                         vim.notify("mcp-hub installed successfully!", vim.log.levels.INFO)
                     else

@@ -31,18 +31,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
                 return
             end
 
-            if event.data.spec.name == "mcphub.nvim" then
-                vim.notify("mcp-hub updated, running make...", vim.log.levels.INFO)
-                vim.uv.spawn("npm", {
-                    args = { "install", "-g", "mcp-hub@latest" },
-                }, function(exitcode)
-                    if exitcode == 0 then
-                        vim.notify("mcp-hub installed successfully!", vim.log.levels.INFO)
-                    else
-                        vim.notify("Error installing mcp-hub!", vim.log.levels.ERROR)
-                    end
-                end)
-            end
         end
     end,
 })
@@ -53,6 +41,9 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   desc = "Add missing imports and remove unused imports for TS",
   pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
   callback = function()
+    if not vim.g.auto_fix_imports then
+      return
+    end
     local params = vim.lsp.util.make_range_params()
     params.context = {
       only = { "source.addMissingImports.ts", "source.removeUnused.ts" },

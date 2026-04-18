@@ -62,6 +62,9 @@ vim.keymap.set("n", "<leader>fp", function()
   print(vim.api.nvim_buf_get_name(0))
 end, { desc = "Show Full Path of Current Buffer" })
 
+-- Search
+wk.add({ { "<leader>s", group = "Search" } })
+
 -- package management
 wk.add({ { "<leader>p", group = "Packs" } })
 vim.keymap.set("n", "<leader>pc", function()
@@ -71,7 +74,7 @@ vim.keymap.set("n", "<leader>pu", function()
     vim.pack.update({}, { force = true })
 end, { desc = "Update Packages" })
 
--- Search
+-- Replace
 vim.keymap.set("n", "<leader>sr", function()
     local grug = require("grug-far")
     local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")

@@ -11,14 +11,32 @@
       "name": "llama.cpp (local)",
       "options": {
         "baseURL": "http://127.0.0.1:9090/v1"
+      },
+      "models": {
+        "qwen3.6-27b:thinking": {},
+        "qwen3.6-27b:thinking-coding": {},
+        "qwen3.6-27b:instruct": {},
+        "qwen3.6-27b:instruct-reasoning": {},
+        "qwen3.6-35b-a3b:thinking": {},
+        "qwen3.6-35b-a3b:thinking-coding": {},
+        "qwen3.6-35b-a3b:instruct": {},
+        "qwen3.6-35b-a3b:instruct-reasoning": {}
       }
     }
   },
   "mcp": {
-    "anuglar-cli": {
+    "websearch": {
       "enabled": true,
       "type": "local",
-      "command": ["npx", "-y", "@angular/cli", "mcp"]
+      "command": ["npx", "-y", "tavily-mcp@latest"],
+      "environment": {
+        "TAVILY_API_KEY": "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"
+      }
+    },
+    "context": {
+      "command": ["context", "serve"],
+      "enabled": true,
+      "type": "local"
     },
     "playwright": {
       "type": "local",
@@ -30,7 +48,12 @@
         "/usr/sbin/brave"
       ],
       "enabled": true
+    },
+    "tauri": {
+      "type": "local",
+      "command": ["npx", "-y", "@hypothesi/tauri-mcp-server@latest"],
+      "enabled": true
     }
   },
-  "plugin": ["opencode-plugin-llama.cpp@latest"]
+  "plugin": ["oh-my-openagent@latest"]
 }

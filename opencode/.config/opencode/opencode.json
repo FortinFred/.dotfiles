@@ -25,7 +25,7 @@
     }
   },
   "mcp": {
-    "websearch": {
+    "websearch-fallback": {
       "enabled": true,
       "type": "local",
       "command": ["npx", "-y", "tavily-mcp@latest"],

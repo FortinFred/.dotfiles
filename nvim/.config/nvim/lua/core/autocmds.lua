@@ -15,22 +15,6 @@ vim.api.nvim_create_autocmd("PackChanged", {
                 end
             end
 
-            -- avante
-            if event.data.spec.name == "avante.nvim" then
-                vim.notify("avante updated, running make...", vim.log.levels.INFO)
-                vim.uv.spawn("make", {
-                    args = {},
-                    cwd = event.data.path,
-                }, function(exitcode)
-                    if exitcode == 0 then
-                        vim.notify("avante built successfully!", vim.log.levels.INFO)
-                    else
-                        vim.notify("Error building(make) avante!", vim.log.levels.ERROR)
-                    end
-                end)
-                return
-            end
-
         end
     end,
 })

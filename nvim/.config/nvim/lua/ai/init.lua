@@ -1,3 +1,2 @@
 require("ai.copilot")
--- require("ai.mcphub")
--- require("ai.avante")
+require("pi-nvim").setup()

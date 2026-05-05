@@ -59,11 +59,10 @@ vim.pack.add({
     -- copilot.lua for GitHub Copilot integration
     "https://github.com/zbirenbaum/copilot.lua",
 
-    -- opencode
-    "https://github.com/nickjvandyke/opencode.nvim",
+    -- pi-nvim for pi coding agent integration
+    "https://github.com/carderne/pi-nvim",
 
-
-    --tmux
+    -- tmux
     "https://github.com/alexghergh/nvim-tmux-navigation",
 
     --grug-far

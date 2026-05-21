@@ -29,5 +29,5 @@ require("mini.files").setup({
 })
 
 vim.keymap.set("n", "<leader>e", function()
-    MiniFiles.open()
+    MiniFiles.open(vim.api.nvim_buf_get_name(0))
 end, { desc = "Open Explorer" })

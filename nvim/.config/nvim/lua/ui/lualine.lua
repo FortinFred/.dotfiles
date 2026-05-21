@@ -7,7 +7,7 @@ require("lualine").setup({
     sections = {
         lualine_a = { { "mode", icon = "" } },
         lualine_b = { "branch" },
-        lualine_c = { "filename" },
+        lualine_c = { { "filename", path = 1 } },
         lualine_x = { 
           { require("noice").api.status.mode.get,
             cond = require("noice").api.status.mode.has,

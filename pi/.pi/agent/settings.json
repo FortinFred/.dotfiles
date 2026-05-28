@@ -5,7 +5,8 @@
   "defaultThinkingLevel": "medium",
   "packages": [
     "npm:pi-web-access",
-    "npm:pi-nvim"
+    "npm:pi-nvim",
+    "npm:pi-mcp-adapter"
   ],
   "theme": "dark"
 }

@@ -1,0 +1,8 @@
+[
+  {
+    "provider": "llama-swap",
+    "baseUrl": "http://localhost:9090/v1",
+    "api": "openai-completions",
+    "apiKey": "not-needed"
+  }
+]

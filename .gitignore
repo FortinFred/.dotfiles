@@ -6,3 +6,4 @@ lazyvim/.config/lazyvim/lazy-lock.json
 /pi/.pi/agent/npm
 /pi/.pi/agent/sessions
 /pi/.pi/agent/skills/omarchy
+/pi/.pi/agent/mcp-cache.json

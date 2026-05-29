@@ -6,7 +6,8 @@
   "packages": [
     "npm:pi-web-access",
     "npm:pi-nvim",
-    "npm:pi-mcp-adapter"
+    "npm:pi-mcp-adapter",
+    "npm:@neuledge/context"
   ],
   "theme": "dark"
 }

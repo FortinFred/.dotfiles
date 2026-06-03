@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.77.0",
+  "lastChangelogVersion": "0.78.0",
   "defaultProvider": "llama-swap",
-  "defaultModel": "qwen3.6-35b-a3b:thinking",
+  "defaultModel": "dflash_qwen3.6-27b:agent",
   "defaultThinkingLevel": "medium",
   "packages": [
     "npm:pi-web-access",
@@ -9,7 +9,9 @@
     "npm:pi-mcp-adapter",
     "npm:@neuledge/context",
     "npm:@ssweens/pi-dynamic-models",
-    "npm:pi-playwright"
+    "npm:pi-playwright",
+    "npm:pi-caveman",
+    "npm:context-mode"
   ],
   "theme": "dark"
 }

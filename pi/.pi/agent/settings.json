@@ -11,7 +11,10 @@
     "npm:@ssweens/pi-dynamic-models",
     "npm:pi-playwright",
     "npm:pi-caveman",
-    "npm:context-mode"
+    "npm:context-mode",
+    "npm:pi-lens",
+    "npm:pi-rtk-optimizer",
+    "npm:pi-gitnexus"
   ],
   "theme": "dark"
 }

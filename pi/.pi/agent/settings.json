@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.78.0",
+  "lastChangelogVersion": "0.79.9",
   "defaultProvider": "llama-swap",
   "defaultModel": "dflash_qwen3.6-27b:agent",
   "defaultThinkingLevel": "medium",
@@ -9,12 +9,8 @@
     "npm:pi-mcp-adapter",
     "npm:@neuledge/context",
     "npm:@ssweens/pi-dynamic-models",
-    "npm:pi-playwright",
-    "npm:pi-caveman",
-    "npm:context-mode",
-    "npm:pi-lens",
-    "npm:pi-rtk-optimizer",
-    "npm:pi-gitnexus"
+    "npm:pi-gitnexus",
+    "git:github.com/DietrichGebert/ponytail"
   ],
   "theme": "dark"
 }

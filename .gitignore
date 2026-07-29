@@ -7,3 +7,32 @@ lazyvim/.config/lazyvim/lazy-lock.json
 /pi/.pi/agent/sessions
 /pi/.pi/agent/skills/omarchy
 /pi/.pi/agent/mcp-cache.json
+
+# Backup files
+*.bak
+*.bak.*
+*.backup
+*.backup.*
+*.original
+*.original.*
+*.original-conf
+*.backup-conf
+
+# Node modules / generated
+node_modules/
+*.lock
+package-lock.json
+
+# Pi agent auth/data
+trust.json
+
+# Herdr runtime (plugins, logs, session state managed by herdr itself)
+herdr/.config/herdr/plugins
+herdr/.config/herdr/*.log
+herdr/.config/herdr/*.sock
+herdr/.config/herdr/*.json
+herdr/.config/herdr/*.lock
+
+# Shaders are system-provided symlinks
+hyprland/.config/hypr/shaders/
+/nvim/.config/nvim/nvim-pack-lock.json

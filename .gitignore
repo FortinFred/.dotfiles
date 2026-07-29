@@ -36,3 +36,4 @@ herdr/.config/herdr/*.lock
 # Shaders are system-provided symlinks
 hyprland/.config/hypr/shaders/
 /nvim/.config/nvim/nvim-pack-lock.json
+/nvim/.config/nvim/nvim-pack-lock.json

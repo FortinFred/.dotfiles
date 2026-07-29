@@ -53,7 +53,6 @@ vim.pack.add({
     "https://github.com/folke/trouble.nvim",
 
     -- live-preview.nvim with dependencies for live preview of markdown files
-    "https://github.com/folke/snacks.nvim",
     "https://github.com/brianhuster/live-preview.nvim",
 
     -- copilot.lua for GitHub Copilot integration

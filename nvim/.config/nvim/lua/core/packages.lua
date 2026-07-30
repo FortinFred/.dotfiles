@@ -61,8 +61,8 @@ vim.pack.add({
     -- sidekick.nvim for NES + AI CLI terminal (herdr branch)
     { src = "https://github.com/rmarganti/sidekick.nvim", version = "herdr"},
 
-    -- tmux
-    "https://github.com/alexghergh/nvim-tmux-navigation",
+    -- herdr navigation + resizing
+    "https://github.com/lmilojevicc/herdr-splits.nvim",
 
     --grug-far
     "https://github.com/MagicDuck/grug-far.nvim",

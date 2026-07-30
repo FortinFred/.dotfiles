@@ -87,13 +87,4 @@ vim.keymap.set("n", "<leader>sr", function()
 end, { desc = "Search and Replace" })
 
 
--- pi-nvim (pi coding agent)
-wk.add({ { "<leader>ai", group = "pi" } })
-vim.keymap.set("n", "<leader>ai", ":Pi<CR>",                          { desc = "Send to pi" })
-vim.keymap.set("v", "<leader>ai", ":Pi<CR>",                          { desc = "Send selection to pi" })
-vim.keymap.set("n", "<leader>aip", ":PiSend<CR>",                      { desc = "Prompt pi" })
-vim.keymap.set("n", "<leader>aif", ":PiSendFile<CR>",                  { desc = "Send file to pi" })
-vim.keymap.set("v", "<leader>aip", ":PiSendSelection<CR>",             { desc = "Send selection to pi" })
-vim.keymap.set("n", "<leader>aib", ":PiSendBuffer<CR>",                { desc = "Send buffer to pi" })
-vim.keymap.set("n", "<leader>aii", ":PiPing<CR>",                      { desc = "Ping pi" })
-vim.keymap.set("n", "<leader>ais", ":PiSessions<CR>",                  { desc = "List pi sessions" })
+

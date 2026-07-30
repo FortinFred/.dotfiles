@@ -58,8 +58,8 @@ vim.pack.add({
     -- copilot.lua for GitHub Copilot integration
     "https://github.com/zbirenbaum/copilot.lua",
 
-    -- pi-nvim for pi coding agent integration
-    "https://github.com/carderne/pi-nvim",
+    -- sidekick.nvim for NES + AI CLI terminal (herdr branch)
+    { src = "https://github.com/rmarganti/sidekick.nvim", version = "herdr"},
 
     -- tmux
     "https://github.com/alexghergh/nvim-tmux-navigation",

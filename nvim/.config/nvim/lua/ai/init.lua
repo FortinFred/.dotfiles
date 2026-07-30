@@ -1,2 +1,2 @@
 require("ai.copilot")
-require("pi-nvim").setup()
+require("ai.sidekick")

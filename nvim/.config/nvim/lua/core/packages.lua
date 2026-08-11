@@ -20,6 +20,9 @@ vim.pack.add({
     -- LSP
     "https://github.com/neovim/nvim-lspconfig",
 
+    -- DAP
+    "https://github.com/mfussenegger/nvim-dap",
+
     -- mini.nvim for multiple utilities
     "https://github.com/echasnovski/mini.nvim",
 
@@ -66,4 +69,7 @@ vim.pack.add({
 
     --grug-far
     "https://github.com/MagicDuck/grug-far.nvim",
+
+    --rust
+    "https://github.com/mrcjkb/rustaceanvim"
 })

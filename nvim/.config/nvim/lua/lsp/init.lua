@@ -1,3 +1,4 @@
+require("lsp.mason")
 require("lsp.lsp")
 require("lsp.nvim-treesitter")
 require("lsp.blink")

@@ -23,6 +23,15 @@ vim.pack.add({
     -- DAP
     "https://github.com/mfussenegger/nvim-dap",
 
+    -- nvim-lint
+    { src = "https://github.com/mfussenegger/nvim-lint", name = "lint" },
+
+    -- mason 
+    "https://github.com/mason-org/mason.nvim",
+    "https://github.com/mason-org/mason-lspconfig.nvim",
+    "https://github.com/jay-babu/mason-nvim-dap.nvim",
+    "https://github.com/rshkarin/mason-nvim-lint",
+
     -- mini.nvim for multiple utilities
     "https://github.com/echasnovski/mini.nvim",
 
@@ -44,8 +53,6 @@ vim.pack.add({
     -- conform.nvim for formatting and linting
     "https://github.com/stevearc/conform.nvim",
 
-    -- nvim-lint
-    { src = "https://github.com/mfussenegger/nvim-lint", name = "lint" },
 
     -- blink.cmp and its dependencies
     "https://github.com/giuxtaposition/blink-cmp-copilot",

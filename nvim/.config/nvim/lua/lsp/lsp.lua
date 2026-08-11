@@ -1,13 +1,14 @@
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("stylua")
-vim.lsp.enable("gh_actions")
-
-vim.lsp.enable("angularls")
-vim.lsp.enable("eslint")
-vim.lsp.enable("html")
-vim.lsp.enable("jsonls")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("bashls")
+-- Should be enabled by mason upon install
+-- vim.lsp.enable("lua_ls")
+-- vim.lsp.enable("stylua")
+-- vim.lsp.enable("gh_actions")
+--
+-- vim.lsp.enable("angularls")
+-- vim.lsp.enable("eslint")
+-- vim.lsp.enable("html")
+-- vim.lsp.enable("jsonls")
+-- vim.lsp.enable("ts_ls")
+-- vim.lsp.enable("bashls")
 
 vim.pack.add({ "https://github.com/folke/lazydev.nvim" })
 
